@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{7c98e97e-4ab7-4cd7-bef7-a06448f4769c}</ProjectGuid>
+    <RootNamespace>SummerTTSVS</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>D:\Project-github\SummerTTS_VS\eigen-3.4.0;D:\Project-github\SummerTTS_VS\src\tn\header;D:\Project-github\SummerTTS_VS\include;D:\Project-github\SummerTTS_VS\src\header;$(IncludePath)</IncludePath>
+    <UseStructuredOutput>false</UseStructuredOutput>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;__AVX__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard_C>Default</LanguageStandard_C>
+      <LanguageStandard>Default</LanguageStandard>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="src\engipa\alphabet.cpp" />
+    <ClCompile Include="src\engipa\EnglishText2Id.cpp" />
+    <ClCompile Include="src\engipa\InitIPASymbols.cpp" />
+    <ClCompile Include="src\engipa\ipa.cpp" />
+    <ClCompile Include="src\hz2py\Hanz2Piny.cpp" />
+    <ClCompile Include="src\hz2py\hanzi2phoneid.cpp" />
+    <ClCompile Include="src\hz2py\pinyinmap.cpp" />
+    <ClCompile Include="src\models\DurationPredictor_base.cpp" />
+    <ClCompile Include="src\models\FixDurationPredictor.cpp" />
+    <ClCompile Include="src\models\Generator_base.cpp" />
+    <ClCompile Include="src\models\Generator_hifigan.cpp" />
+    <ClCompile Include="src\models\Generator_Istft.cpp" />
+    <ClCompile Include="src\models\Generator_MBB.cpp" />
+    <ClCompile Include="src\models\Generator_MS.cpp" />
+    <ClCompile Include="src\models\ResidualCouplingBlock.cpp" />
+    <ClCompile Include="src\models\StochasticDurationPredictor.cpp" />
+    <ClCompile Include="src\models\SynthesizerTrn.cpp" />
+    <ClCompile Include="src\models\TextEncoder.cpp" />
+    <ClCompile Include="src\modules\attention_encoder.cpp" />
+    <ClCompile Include="src\modules\ConvFlow.cpp" />
+    <ClCompile Include="src\modules\DDSConv.cpp" />
+    <ClCompile Include="src\modules\ElementwiseAffine.cpp" />
+    <ClCompile Include="src\modules\ffn.cpp" />
+    <ClCompile Include="src\modules\hann.cpp" />
+    <ClCompile Include="src\modules\iStft.cpp" />
+    <ClCompile Include="src\modules\multi_head_attention.cpp" />
+    <ClCompile Include="src\modules\pqmf.cpp" />
+    <ClCompile Include="src\modules\random_gen.cpp" />
+    <ClCompile Include="src\modules\ResBlock1.cpp" />
+    <ClCompile Include="src\modules\ResidualCouplingLayer.cpp" />
+    <ClCompile Include="src\modules\WN.cpp" />
+    <ClCompile Include="src\nn_op\nn_clamp_min.cpp" />
+    <ClCompile Include="src\nn_op\nn_conv1d.cpp" />
+    <ClCompile Include="src\nn_op\nn_conv1d_transposed.cpp" />
+    <ClCompile Include="src\nn_op\nn_cumsum.cpp" />
+    <ClCompile Include="src\nn_op\nn_flip.cpp" />
+    <ClCompile Include="src\nn_op\nn_gelu.cpp" />
+    <ClCompile Include="src\nn_op\nn_layer_norm.cpp" />
+    <ClCompile Include="src\nn_op\nn_leaky_relu.cpp" />
+    <ClCompile Include="src\nn_op\nn_relu.cpp" />
+    <ClCompile Include="src\nn_op\nn_sigmoid.cpp" />
+    <ClCompile Include="src\nn_op\nn_softmax.cpp" />
+    <ClCompile Include="src\nn_op\nn_softplus.cpp" />
+    <ClCompile Include="src\nn_op\nn_tanh.cpp" />
+    <ClCompile Include="src\platform\tts_file_io.cpp" />
+    <ClCompile Include="src\platform\tts_logger.cpp" />
+    <ClCompile Include="src\tn\openfst\src\lib\compat.cc" />
+    <ClCompile Include="src\tn\openfst\src\lib\flags.cc" />
+    <ClCompile Include="src\tn\openfst\src\lib\fst-types.cc" />
+    <ClCompile Include="src\tn\openfst\src\lib\fst.cc" />
+    <ClCompile Include="src\tn\openfst\src\lib\mapped-file.cc" />
+    <ClCompile Include="src\tn\openfst\src\lib\properties.cc" />
+    <ClCompile Include="src\tn\openfst\src\lib\symbol-table-ops.cc" />
+    <ClCompile Include="src\tn\openfst\src\lib\symbol-table.cc" />
+    <ClCompile Include="src\tn\openfst\src\lib\util.cc" />
+    <ClCompile Include="src\tn\openfst\src\lib\weight.cc" />
+    <ClCompile Include="src\tn\processor.cc" />
+    <ClCompile Include="src\tn\token_parser.cc" />
+    <ClCompile Include="src\tn\utf8_string.cc" />
+    <ClCompile Include="src\utils\utils.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\utils.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".gitignore" />
+    <None Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="test.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

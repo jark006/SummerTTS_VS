@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="openfst">
+      <UniqueIdentifier>{5942ad9f-a008-45f8-a19b-a1c772a20f5f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tn">
+      <UniqueIdentifier>{16cb867e-9409-4a6c-91e8-9ca65c1d7af6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="engipa">
+      <UniqueIdentifier>{6d521cdd-2f8a-498e-b9de-2ab434ded3d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="hz2py">
+      <UniqueIdentifier>{a153bcd3-f975-487c-b649-20ffc49ac7cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="nn_op">
+      <UniqueIdentifier>{a0d38bee-885c-41b1-ab43-44b91485b4a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="platform">
+      <UniqueIdentifier>{031b7b58-d888-4b13-b14c-e9a382c4c47c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="modules">
+      <UniqueIdentifier>{8057852a-e31c-4db6-9270-c2e2a2496fe3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="models">
+      <UniqueIdentifier>{3f579835-d291-49a0-80ce-fd3362b672f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{83667e81-b06b-498c-8205-f7aeddbe96ed}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tn\openfst\src\lib\compat.cc">
+      <Filter>openfst</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tn\openfst\src\lib\flags.cc">
+      <Filter>openfst</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tn\openfst\src\lib\fst.cc">
+      <Filter>openfst</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tn\openfst\src\lib\fst-types.cc">
+      <Filter>openfst</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tn\openfst\src\lib\mapped-file.cc">
+      <Filter>openfst</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tn\openfst\src\lib\properties.cc">
+      <Filter>openfst</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tn\openfst\src\lib\symbol-table.cc">
+      <Filter>openfst</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tn\openfst\src\lib\symbol-table-ops.cc">
+      <Filter>openfst</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tn\openfst\src\lib\util.cc">
+      <Filter>openfst</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tn\openfst\src\lib\weight.cc">
+      <Filter>openfst</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tn\processor.cc">
+      <Filter>tn</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tn\token_parser.cc">
+      <Filter>tn</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tn\utf8_string.cc">
+      <Filter>tn</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engipa\alphabet.cpp">
+      <Filter>engipa</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engipa\EnglishText2Id.cpp">
+      <Filter>engipa</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engipa\InitIPASymbols.cpp">
+      <Filter>engipa</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engipa\ipa.cpp">
+      <Filter>engipa</Filter>
+    </ClCompile>
+    <ClCompile Include="src\hz2py\Hanz2Piny.cpp">
+      <Filter>hz2py</Filter>
+    </ClCompile>
+    <ClCompile Include="src\hz2py\hanzi2phoneid.cpp">
+      <Filter>hz2py</Filter>
+    </ClCompile>
+    <ClCompile Include="src\hz2py\pinyinmap.cpp">
+      <Filter>hz2py</Filter>
+    </ClCompile>
+    <ClCompile Include="src\nn_op\nn_clamp_min.cpp">
+      <Filter>nn_op</Filter>
+    </ClCompile>
+    <ClCompile Include="src\nn_op\nn_conv1d.cpp">
+      <Filter>nn_op</Filter>
+    </ClCompile>
+    <ClCompile Include="src\nn_op\nn_conv1d_transposed.cpp">
+      <Filter>nn_op</Filter>
+    </ClCompile>
+    <ClCompile Include="src\nn_op\nn_cumsum.cpp">
+      <Filter>nn_op</Filter>
+    </ClCompile>
+    <ClCompile Include="src\nn_op\nn_flip.cpp">
+      <Filter>nn_op</Filter>
+    </ClCompile>
+    <ClCompile Include="src\nn_op\nn_gelu.cpp">
+      <Filter>nn_op</Filter>
+    </ClCompile>
+    <ClCompile Include="src\nn_op\nn_layer_norm.cpp">
+      <Filter>nn_op</Filter>
+    </ClCompile>
+    <ClCompile Include="src\nn_op\nn_leaky_relu.cpp">
+      <Filter>nn_op</Filter>
+    </ClCompile>
+    <ClCompile Include="src\nn_op\nn_relu.cpp">
+      <Filter>nn_op</Filter>
+    </ClCompile>
+    <ClCompile Include="src\nn_op\nn_sigmoid.cpp">
+      <Filter>nn_op</Filter>
+    </ClCompile>
+    <ClCompile Include="src\nn_op\nn_softmax.cpp">
+      <Filter>nn_op</Filter>
+    </ClCompile>
+    <ClCompile Include="src\nn_op\nn_softplus.cpp">
+      <Filter>nn_op</Filter>
+    </ClCompile>
+    <ClCompile Include="src\nn_op\nn_tanh.cpp">
+      <Filter>nn_op</Filter>
+    </ClCompile>
+    <ClCompile Include="src\platform\tts_file_io.cpp">
+      <Filter>platform</Filter>
+    </ClCompile>
+    <ClCompile Include="src\platform\tts_logger.cpp">
+      <Filter>platform</Filter>
+    </ClCompile>
+    <ClCompile Include="src\utils\utils.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\attention_encoder.cpp">
+      <Filter>modules</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\ConvFlow.cpp">
+      <Filter>modules</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\DDSConv.cpp">
+      <Filter>modules</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\ElementwiseAffine.cpp">
+      <Filter>modules</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\ffn.cpp">
+      <Filter>modules</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\hann.cpp">
+      <Filter>modules</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\iStft.cpp">
+      <Filter>modules</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\multi_head_attention.cpp">
+      <Filter>modules</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\pqmf.cpp">
+      <Filter>modules</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\random_gen.cpp">
+      <Filter>modules</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\ResBlock1.cpp">
+      <Filter>modules</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\ResidualCouplingLayer.cpp">
+      <Filter>modules</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\WN.cpp">
+      <Filter>modules</Filter>
+    </ClCompile>
+    <ClCompile Include="src\models\DurationPredictor_base.cpp">
+      <Filter>models</Filter>
+    </ClCompile>
+    <ClCompile Include="src\models\FixDurationPredictor.cpp">
+      <Filter>models</Filter>
+    </ClCompile>
+    <ClCompile Include="src\models\Generator_base.cpp">
+      <Filter>models</Filter>
+    </ClCompile>
+    <ClCompile Include="src\models\Generator_hifigan.cpp">
+      <Filter>models</Filter>
+    </ClCompile>
+    <ClCompile Include="src\models\Generator_Istft.cpp">
+      <Filter>models</Filter>
+    </ClCompile>
+    <ClCompile Include="src\models\Generator_MBB.cpp">
+      <Filter>models</Filter>
+    </ClCompile>
+    <ClCompile Include="src\models\Generator_MS.cpp">
+      <Filter>models</Filter>
+    </ClCompile>
+    <ClCompile Include="src\models\ResidualCouplingBlock.cpp">
+      <Filter>models</Filter>
+    </ClCompile>
+    <ClCompile Include="src\models\StochasticDurationPredictor.cpp">
+      <Filter>models</Filter>
+    </ClCompile>
+    <ClCompile Include="src\models\SynthesizerTrn.cpp">
+      <Filter>models</Filter>
+    </ClCompile>
+    <ClCompile Include="src\models\TextEncoder.cpp">
+      <Filter>models</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\utils.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".gitignore" />
+    <None Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="test.txt" />
+  </ItemGroup>
+</Project>
