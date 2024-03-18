@@ -72,7 +72,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>D:\Project-github\SummerTTS_VS\eigen-3.4.0;D:\Project-github\SummerTTS_VS\src\tn\header;D:\Project-github\SummerTTS_VS\include;D:\Project-github\SummerTTS_VS\src\header;$(IncludePath)</IncludePath>
+    <IncludePath>$(ProjectDir)eigen-3.4.0;$(ProjectDir)src\tn\header;$(ProjectDir)include;$(ProjectDir)src\header;$(IncludePath)</IncludePath>
     <UseStructuredOutput>false</UseStructuredOutput>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
