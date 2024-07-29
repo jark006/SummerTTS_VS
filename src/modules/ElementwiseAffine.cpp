@@ -5,7 +5,7 @@ using Eigen::Map;
 
 struct ELEMENT_AFFINE_DATA_t_def
 {
-    int32_t channels_;
+    int32_t channels_ = 0;
     MatrixXf m_;
     MatrixXf logs_;
     EIGEN_MAKE_ALIGNED_OPERATOR_NEW
@@ -20,8 +20,6 @@ ElementwiseAffine::ElementwiseAffine(float * modelData, int32_t & offset, int32_
         tts_log(TTS_LOG_ERROR, "ElementwiseAffine: Failed to allocate memory for internal data block\n");
         return;
     }
-    
-    memset(elementAffineData,0,sizeof(ELEMENT_AFFINE_DATA_t));
     
     elementAffineData->channels_ = channels;
 

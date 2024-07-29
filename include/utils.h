@@ -140,7 +140,9 @@ public:
 
             if (codePoint < 128) { // ascii
                 // 大写字母的前一个无论大小写，都插入空格隔开，单独发音，因为英文模型不会读全大写单词短语
-                if (('A' <= codePoint && codePoint <= 'Z') && isalpha(lastCodePoint)) {
+                if (('A' <= codePoint && codePoint <= 'Z') &&
+                    (('A' <= lastCodePoint && lastCodePoint <= 'Z') ||
+                        ('a' <= lastCodePoint && lastCodePoint <= 'z'))) {
                     out.push_back(' ');
                     out.push_back(codePoint);
                 } else if (isalnum(codePoint)) {

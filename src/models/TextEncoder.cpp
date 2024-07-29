@@ -7,12 +7,12 @@ using Eigen::Map;
 
 struct TEXT_ENCODER_DATA_t_def
 {
-    int32_t vocabSize_;
-    int32_t embSize_;
-    int32_t hiddenChannels_;
+    int32_t vocabSize_ = 0;
+    int32_t embSize_ = 0;
+    int32_t hiddenChannels_ = 0;
     MatrixXf emb_;
-    attention_encoder * encoder_;
-    nn_conv1d * proj_;
+    attention_encoder* encoder_ = nullptr;
+    nn_conv1d* proj_ = nullptr;
     EIGEN_MAKE_ALIGNED_OPERATOR_NEW
 };
 using TEXT_ENCODER_DATA_t = TEXT_ENCODER_DATA_t_def;
@@ -25,7 +25,6 @@ TextEncoder::TextEncoder(float * modelData, int32_t & offset)
         tts_log(TTS_LOG_ERROR, "Text Encoder: Failed to allocate memory for internal data block\n");
         return;
     }
-    memset(textEncoderData, 0, sizeof(TEXT_ENCODER_DATA_t));
     
     int32_t curOffset = offset;
 
