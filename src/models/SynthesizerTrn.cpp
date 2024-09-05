@@ -21,6 +21,7 @@
 #include <streambuf>
 #include "cppjieba/Jieba.hpp"
 #include "EnglishText2Id.h"
+#include "Utils.h"
 
 using Eigen::MatrixXf;
 using Eigen::Map;
@@ -327,11 +328,15 @@ int16_t * SynthesizerTrn::infer(const string & line, int32_t sid, float lengthSc
     int32_t strLen = 0;
     if(synData->langType_ == LANG_TYPE_CHS)
     {
-        string tnString = line;
+        string tnString;
         if(synData->tnProcessor_ != NULL)
         {
-            string tagged_text = synData->tnProcessor_->tag(line);
-            tnString = synData->tnProcessor_->verbalize(tagged_text);
+            //string tagged_text = synData->tnProcessor_->tag(line);
+            //tnString = synData->tnProcessor_->verbalize(tagged_text);
+            tnString = TextSet::filterChineseAndNum(line);
+        }
+        else {
+            tnString = line;
         }
 
         synData->jieba_->Cut(tnString, synData->jieba_words_, true);
@@ -389,12 +394,98 @@ int16_t * SynthesizerTrn::infer(const string & line, int32_t sid, float lengthSc
 
     int16_t * retData = (int16_t *)malloc(sizeof(int16_t)*dataLen);
 
-    for(int32_t i = 0; i< dataLen; i++)
-    {
-        retData[i] = (int16_t)(o.data()[i]*32737);
+    if (retData != nullptr) {
+        for (int32_t i = 0; i < dataLen; i++)
+        {
+            retData[i] = (int16_t)(o.data()[i] * 32737);
+        }
     }
 
     delete [] strIDs;
+
+    return retData;
+}
+
+std::vector<int16_t> SynthesizerTrn::infer(const string& line, int32_t sid, float lengthScale)
+{
+    SYN_DATA_t* synData = (SYN_DATA_t*)priv_;
+
+    int32_t* strIDs = NULL;
+    int32_t strLen = 0;
+    if (synData->langType_ == LANG_TYPE_CHS)
+    {
+        string tnString;
+        if (synData->tnProcessor_ != NULL)
+        {
+            //string tagged_text = synData->tnProcessor_->tag(line);
+            //tnString = synData->tnProcessor_->verbalize(tagged_text);
+            tnString = TextSet::filterChineseAndNum(line);
+        }
+        else {
+            tnString = line;
+        }
+
+        synData->jieba_->Cut(tnString, synData->jieba_words_, true);
+
+        strIDs = synData->hz2ID_->convert(tnString, strLen, synData->jieba_words_);
+
+    }
+    else if (synData->langType_ == LANG_TYPE_ENG)
+    {
+        vector<int> engIDVec = synData->eng2Ipa_->getIPAId(line);
+        strLen = engIDVec.size();
+
+        strIDs = new int32_t[strLen];
+
+        for (int32_t ii = 0; ii < strLen; ii++)
+        {
+            strIDs[ii] = engIDVec[ii];
+        }
+        lengthScale = lengthScale * 0.83;
+    }
+
+    float noiseScale = 0.0;
+
+    MatrixXf m;
+    MatrixXf logs;
+    MatrixXf XX = synData->textEncoder_->forward(strIDs, strLen, m, logs);
+
+    MatrixXf g;
+    if (synData->isMS_ == 1)
+    {
+        if ((sid < 0) || (sid >= synData->spkNum_))
+        {
+            sid = 0;
+        }
+
+        g = synData->emg_.row(sid);
+    }
+
+    MatrixXf logw = synData->durPredicator_->forward(XX, g, noiseScale);
+
+    MatrixXf w = logw.array().exp() * lengthScale;
+    MatrixXf w_ceil = w.array().ceil();
+    MatrixXf y_lengths = nn_clamp_min(w_ceil.colwise().sum(), 1.0);
+
+    MatrixXf m_expand = expandM(m, w_ceil);
+    MatrixXf logs_expand = expandM(logs, w_ceil);
+
+    MatrixXf z_p = m_expand.array() + rand_gen(m_expand.rows(), m_expand.cols(), 0.0, 1.0).array() * logs_expand.array() * noiseScale;
+
+    MatrixXf z = synData->flow_->forward(z_p, g);
+
+    MatrixXf o = synData->dec_->forward(z, g);
+
+    int dataLen = o.rows() * o.cols();
+
+    vector<int16_t> retData(dataLen);
+
+    for (int32_t i = 0; i < dataLen; i++)
+    {
+        retData[i] = (int16_t)(o.data()[i] * 32737);
+    }
+
+    delete[] strIDs;
 
     return retData;
 }

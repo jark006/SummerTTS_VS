@@ -113,7 +113,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>false</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_CONSOLE;__AVX__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
@@ -134,7 +134,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>false</SDLCheck>
-      <PreprocessorDefinitions>NDEBUG;_CONSOLE;__AVX__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
       <LanguageStandard>stdcpp14</LanguageStandard>
@@ -214,6 +214,186 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\utils.h" />
+    <ClInclude Include="src\header\attention_encoder.h" />
+    <ClInclude Include="src\header\ConvFlow.h" />
+    <ClInclude Include="src\header\cppjieba\DictTrie.hpp" />
+    <ClInclude Include="src\header\cppjieba\FullSegment.hpp" />
+    <ClInclude Include="src\header\cppjieba\HMMModel.hpp" />
+    <ClInclude Include="src\header\cppjieba\HMMSegment.hpp" />
+    <ClInclude Include="src\header\cppjieba\Jieba.hpp" />
+    <ClInclude Include="src\header\cppjieba\KeywordExtractor.hpp" />
+    <ClInclude Include="src\header\cppjieba\MixSegment.hpp" />
+    <ClInclude Include="src\header\cppjieba\MPSegment.hpp" />
+    <ClInclude Include="src\header\cppjieba\PosTagger.hpp" />
+    <ClInclude Include="src\header\cppjieba\PreFilter.hpp" />
+    <ClInclude Include="src\header\cppjieba\QuerySegment.hpp" />
+    <ClInclude Include="src\header\cppjieba\SegmentBase.hpp" />
+    <ClInclude Include="src\header\cppjieba\SegmentTagged.hpp" />
+    <ClInclude Include="src\header\cppjieba\TextRankExtractor.hpp" />
+    <ClInclude Include="src\header\cppjieba\Trie.hpp" />
+    <ClInclude Include="src\header\cppjieba\Unicode.hpp" />
+    <ClInclude Include="src\header\DDSConv.h" />
+    <ClInclude Include="src\header\DurationPredictor_base.h" />
+    <ClInclude Include="src\header\ElementwiseAffine.h" />
+    <ClInclude Include="src\header\EnglishText2Id.h" />
+    <ClInclude Include="src\header\ffn.h" />
+    <ClInclude Include="src\header\FixDurationPredictor.h" />
+    <ClInclude Include="src\header\Generator_base.h" />
+    <ClInclude Include="src\header\Generator_hifigan.h" />
+    <ClInclude Include="src\header\Generator_Istft.h" />
+    <ClInclude Include="src\header\Generator_MBB.h" />
+    <ClInclude Include="src\header\Generator_MS.h" />
+    <ClInclude Include="src\header\Hanz2Piny.h" />
+    <ClInclude Include="src\header\hanzi2phoneid.h" />
+    <ClInclude Include="src\header\iStft.h" />
+    <ClInclude Include="src\header\limonp\ArgvContext.hpp" />
+    <ClInclude Include="src\header\limonp\BlockingQueue.hpp" />
+    <ClInclude Include="src\header\limonp\BoundedBlockingQueue.hpp" />
+    <ClInclude Include="src\header\limonp\BoundedQueue.hpp" />
+    <ClInclude Include="src\header\limonp\Closure.hpp" />
+    <ClInclude Include="src\header\limonp\Colors.hpp" />
+    <ClInclude Include="src\header\limonp\Condition.hpp" />
+    <ClInclude Include="src\header\limonp\Config.hpp" />
+    <ClInclude Include="src\header\limonp\FileLock.hpp" />
+    <ClInclude Include="src\header\limonp\ForcePublic.hpp" />
+    <ClInclude Include="src\header\limonp\LocalVector.hpp" />
+    <ClInclude Include="src\header\limonp\Logging.hpp" />
+    <ClInclude Include="src\header\limonp\Md5.hpp" />
+    <ClInclude Include="src\header\limonp\MutexLock.hpp" />
+    <ClInclude Include="src\header\limonp\NonCopyable.hpp" />
+    <ClInclude Include="src\header\limonp\StdExtension.hpp" />
+    <ClInclude Include="src\header\limonp\StringUtil.hpp" />
+    <ClInclude Include="src\header\limonp\Thread.hpp" />
+    <ClInclude Include="src\header\limonp\ThreadPool.hpp" />
+    <ClInclude Include="src\header\multi_head_attention.h" />
+    <ClInclude Include="src\header\nn_clamp_min.h" />
+    <ClInclude Include="src\header\nn_conv1d.h" />
+    <ClInclude Include="src\header\nn_conv1d_transposed.h" />
+    <ClInclude Include="src\header\nn_cumsum.h" />
+    <ClInclude Include="src\header\nn_flip.h" />
+    <ClInclude Include="src\header\nn_gelu.h" />
+    <ClInclude Include="src\header\nn_layer_norm.h" />
+    <ClInclude Include="src\header\nn_leaky_relu.h" />
+    <ClInclude Include="src\header\nn_relu.h" />
+    <ClInclude Include="src\header\nn_sigmoid.h" />
+    <ClInclude Include="src\header\nn_softmax.h" />
+    <ClInclude Include="src\header\nn_softplus.h" />
+    <ClInclude Include="src\header\nn_tanh.h" />
+    <ClInclude Include="src\header\pinyinmap.h" />
+    <ClInclude Include="src\header\pqmf.h" />
+    <ClInclude Include="src\header\random_gen.h" />
+    <ClInclude Include="src\header\ResBlock1.h" />
+    <ClInclude Include="src\header\ResidualCouplingBlock.h" />
+    <ClInclude Include="src\header\ResidualCouplingLayer.h" />
+    <ClInclude Include="src\header\StochasticDurationPredictor.h" />
+    <ClInclude Include="src\header\TextEncoder.h" />
+    <ClInclude Include="src\header\WN.h" />
+    <ClInclude Include="src\tn\header\fst\accumulator.h" />
+    <ClInclude Include="src\tn\header\fst\add-on.h" />
+    <ClInclude Include="src\tn\header\fst\arc-arena.h" />
+    <ClInclude Include="src\tn\header\fst\arc-map.h" />
+    <ClInclude Include="src\tn\header\fst\arc.h" />
+    <ClInclude Include="src\tn\header\fst\arcfilter.h" />
+    <ClInclude Include="src\tn\header\fst\arcsort.h" />
+    <ClInclude Include="src\tn\header\fst\bi-table.h" />
+    <ClInclude Include="src\tn\header\fst\cache.h" />
+    <ClInclude Include="src\tn\header\fst\cc-visitors.h" />
+    <ClInclude Include="src\tn\header\fst\closure.h" />
+    <ClInclude Include="src\tn\header\fst\compact-fst.h" />
+    <ClInclude Include="src\tn\header\fst\compat.h" />
+    <ClInclude Include="src\tn\header\fst\complement.h" />
+    <ClInclude Include="src\tn\header\fst\compose-filter.h" />
+    <ClInclude Include="src\tn\header\fst\compose.h" />
+    <ClInclude Include="src\tn\header\fst\concat.h" />
+    <ClInclude Include="src\tn\header\fst\connect.h" />
+    <ClInclude Include="src\tn\header\fst\const-fst.h" />
+    <ClInclude Include="src\tn\header\fst\determinize.h" />
+    <ClInclude Include="src\tn\header\fst\dfs-visit.h" />
+    <ClInclude Include="src\tn\header\fst\difference.h" />
+    <ClInclude Include="src\tn\header\fst\disambiguate.h" />
+    <ClInclude Include="src\tn\header\fst\edit-fst.h" />
+    <ClInclude Include="src\tn\header\fst\encode.h" />
+    <ClInclude Include="src\tn\header\fst\epsnormalize.h" />
+    <ClInclude Include="src\tn\header\fst\equal.h" />
+    <ClInclude Include="src\tn\header\fst\equivalent.h" />
+    <ClInclude Include="src\tn\header\fst\error-weight.h" />
+    <ClInclude Include="src\tn\header\fst\expanded-fst.h" />
+    <ClInclude Include="src\tn\header\fst\expander-cache.h" />
+    <ClInclude Include="src\tn\header\fst\expectation-weight.h" />
+    <ClInclude Include="src\tn\header\fst\factor-weight.h" />
+    <ClInclude Include="src\tn\header\fst\filter-state.h" />
+    <ClInclude Include="src\tn\header\fst\flags.h" />
+    <ClInclude Include="src\tn\header\fst\float-weight.h" />
+    <ClInclude Include="src\tn\header\fst\fst-decl.h" />
+    <ClInclude Include="src\tn\header\fst\fst.h" />
+    <ClInclude Include="src\tn\header\fst\fstlib.h" />
+    <ClInclude Include="src\tn\header\fst\generic-register.h" />
+    <ClInclude Include="src\tn\header\fst\heap.h" />
+    <ClInclude Include="src\tn\header\fst\icu.h" />
+    <ClInclude Include="src\tn\header\fst\impl-to-fst.h" />
+    <ClInclude Include="src\tn\header\fst\intersect.h" />
+    <ClInclude Include="src\tn\header\fst\interval-set.h" />
+    <ClInclude Include="src\tn\header\fst\invert.h" />
+    <ClInclude Include="src\tn\header\fst\isomorphic.h" />
+    <ClInclude Include="src\tn\header\fst\label-reachable.h" />
+    <ClInclude Include="src\tn\header\fst\lexicographic-weight.h" />
+    <ClInclude Include="src\tn\header\fst\lock.h" />
+    <ClInclude Include="src\tn\header\fst\log.h" />
+    <ClInclude Include="src\tn\header\fst\lookahead-filter.h" />
+    <ClInclude Include="src\tn\header\fst\lookahead-matcher.h" />
+    <ClInclude Include="src\tn\header\fst\mapped-file.h" />
+    <ClInclude Include="src\tn\header\fst\matcher-fst.h" />
+    <ClInclude Include="src\tn\header\fst\matcher.h" />
+    <ClInclude Include="src\tn\header\fst\memory.h" />
+    <ClInclude Include="src\tn\header\fst\minimize.h" />
+    <ClInclude Include="src\tn\header\fst\mutable-fst.h" />
+    <ClInclude Include="src\tn\header\fst\pair-weight.h" />
+    <ClInclude Include="src\tn\header\fst\partition.h" />
+    <ClInclude Include="src\tn\header\fst\power-weight-mappers.h" />
+    <ClInclude Include="src\tn\header\fst\power-weight.h" />
+    <ClInclude Include="src\tn\header\fst\product-weight.h" />
+    <ClInclude Include="src\tn\header\fst\project.h" />
+    <ClInclude Include="src\tn\header\fst\properties.h" />
+    <ClInclude Include="src\tn\header\fst\prune.h" />
+    <ClInclude Include="src\tn\header\fst\push.h" />
+    <ClInclude Include="src\tn\header\fst\queue.h" />
+    <ClInclude Include="src\tn\header\fst\randequivalent.h" />
+    <ClInclude Include="src\tn\header\fst\randgen.h" />
+    <ClInclude Include="src\tn\header\fst\rational.h" />
+    <ClInclude Include="src\tn\header\fst\register.h" />
+    <ClInclude Include="src\tn\header\fst\relabel.h" />
+    <ClInclude Include="src\tn\header\fst\replace-util.h" />
+    <ClInclude Include="src\tn\header\fst\replace.h" />
+    <ClInclude Include="src\tn\header\fst\reverse.h" />
+    <ClInclude Include="src\tn\header\fst\reweight.h" />
+    <ClInclude Include="src\tn\header\fst\rmepsilon.h" />
+    <ClInclude Include="src\tn\header\fst\rmfinalepsilon.h" />
+    <ClInclude Include="src\tn\header\fst\set-weight.h" />
+    <ClInclude Include="src\tn\header\fst\shortest-distance.h" />
+    <ClInclude Include="src\tn\header\fst\shortest-path.h" />
+    <ClInclude Include="src\tn\header\fst\signed-log-weight.h" />
+    <ClInclude Include="src\tn\header\fst\sparse-power-weight.h" />
+    <ClInclude Include="src\tn\header\fst\sparse-tuple-weight.h" />
+    <ClInclude Include="src\tn\header\fst\state-map.h" />
+    <ClInclude Include="src\tn\header\fst\state-reachable.h" />
+    <ClInclude Include="src\tn\header\fst\state-table.h" />
+    <ClInclude Include="src\tn\header\fst\statesort.h" />
+    <ClInclude Include="src\tn\header\fst\string-weight.h" />
+    <ClInclude Include="src\tn\header\fst\string.h" />
+    <ClInclude Include="src\tn\header\fst\symbol-table-ops.h" />
+    <ClInclude Include="src\tn\header\fst\symbol-table.h" />
+    <ClInclude Include="src\tn\header\fst\synchronize.h" />
+    <ClInclude Include="src\tn\header\fst\test-properties.h" />
+    <ClInclude Include="src\tn\header\fst\topsort.h" />
+    <ClInclude Include="src\tn\header\fst\tuple-weight.h" />
+    <ClInclude Include="src\tn\header\fst\union-find.h" />
+    <ClInclude Include="src\tn\header\fst\union-weight.h" />
+    <ClInclude Include="src\tn\header\fst\union.h" />
+    <ClInclude Include="src\tn\header\fst\util.h" />
+    <ClInclude Include="src\tn\header\fst\vector-fst.h" />
+    <ClInclude Include="src\tn\header\fst\verify.h" />
+    <ClInclude Include="src\tn\header\fst\visit.h" />
+    <ClInclude Include="src\tn\header\fst\weight.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitignore" />

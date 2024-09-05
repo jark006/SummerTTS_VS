@@ -32,6 +32,18 @@
     <Filter Include="头文件">
       <UniqueIdentifier>{83667e81-b06b-498c-8205-f7aeddbe96ed}</UniqueIdentifier>
     </Filter>
+    <Filter Include="fstHeader">
+      <UniqueIdentifier>{24525cf1-9067-4a34-9b98-8831ac4918a9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="header">
+      <UniqueIdentifier>{a4a56bff-13b6-4cd0-aa8b-ded123fcc46f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="limonpHeader">
+      <UniqueIdentifier>{375e4187-4951-422b-a36f-056ffe9e7838}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cppjiebaHeader">
+      <UniqueIdentifier>{090fee12-6a51-491a-93f0-26a25c912f16}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -221,6 +233,546 @@
   <ItemGroup>
     <ClInclude Include="include\utils.h">
       <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\accumulator.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\add-on.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\arc.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\arc-arena.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\arcfilter.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\arc-map.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\arcsort.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\bi-table.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\cache.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\closure.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\compact-fst.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\compat.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\complement.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\compose.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\compose-filter.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\concat.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\connect.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\const-fst.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\determinize.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\dfs-visit.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\difference.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\disambiguate.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\edit-fst.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\encode.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\epsnormalize.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\equal.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\equivalent.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\expanded-fst.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\expectation-weight.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\factor-weight.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\filter-state.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\flags.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\float-weight.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\fst.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\fst-decl.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\fstlib.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\generic-register.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\heap.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\icu.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\intersect.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\interval-set.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\invert.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\isomorphic.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\label-reachable.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\lexicographic-weight.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\lock.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\log.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\lookahead-filter.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\lookahead-matcher.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\mapped-file.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\matcher.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\matcher-fst.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\memory.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\minimize.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\mutable-fst.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\pair-weight.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\partition.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\power-weight.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\product-weight.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\project.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\properties.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\prune.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\push.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\queue.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\randequivalent.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\randgen.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\rational.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\register.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\relabel.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\replace.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\replace-util.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\reverse.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\reweight.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\rmepsilon.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\rmfinalepsilon.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\set-weight.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\shortest-distance.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\shortest-path.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\signed-log-weight.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\sparse-power-weight.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\sparse-tuple-weight.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\state-map.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\state-reachable.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\statesort.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\state-table.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\string.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\string-weight.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\symbol-table.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\symbol-table-ops.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\synchronize.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\test-properties.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\topsort.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\tuple-weight.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\union.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\union-find.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\union-weight.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\util.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\vector-fst.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\verify.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\visit.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\weight.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\header\attention_encoder.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\header\ConvFlow.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\header\DDSConv.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\header\DurationPredictor_base.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\header\ElementwiseAffine.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\header\EnglishText2Id.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\header\ffn.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\header\FixDurationPredictor.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\header\Generator_base.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\header\Generator_hifigan.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\header\Generator_Istft.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\header\Generator_MBB.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\header\Generator_MS.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\header\Hanz2Piny.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\header\hanzi2phoneid.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\header\iStft.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\header\multi_head_attention.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\header\nn_clamp_min.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\header\nn_conv1d.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\header\nn_conv1d_transposed.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\header\nn_cumsum.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\header\nn_flip.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\header\nn_gelu.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\header\nn_layer_norm.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\header\nn_leaky_relu.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\header\nn_relu.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\header\nn_sigmoid.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\header\nn_softmax.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\header\nn_softplus.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\header\nn_tanh.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\header\pinyinmap.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\header\pqmf.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\header\random_gen.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\header\ResBlock1.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\header\ResidualCouplingBlock.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\header\ResidualCouplingLayer.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\header\StochasticDurationPredictor.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\header\TextEncoder.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\header\WN.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\header\limonp\ArgvContext.hpp">
+      <Filter>limonpHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\header\limonp\BlockingQueue.hpp">
+      <Filter>limonpHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\header\limonp\BoundedBlockingQueue.hpp">
+      <Filter>limonpHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\header\limonp\BoundedQueue.hpp">
+      <Filter>limonpHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\header\limonp\Closure.hpp">
+      <Filter>limonpHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\header\limonp\Colors.hpp">
+      <Filter>limonpHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\header\limonp\Condition.hpp">
+      <Filter>limonpHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\header\limonp\Config.hpp">
+      <Filter>limonpHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\header\limonp\FileLock.hpp">
+      <Filter>limonpHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\header\limonp\ForcePublic.hpp">
+      <Filter>limonpHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\header\limonp\LocalVector.hpp">
+      <Filter>limonpHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\header\limonp\Logging.hpp">
+      <Filter>limonpHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\header\limonp\Md5.hpp">
+      <Filter>limonpHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\header\limonp\MutexLock.hpp">
+      <Filter>limonpHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\header\limonp\NonCopyable.hpp">
+      <Filter>limonpHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\header\limonp\StdExtension.hpp">
+      <Filter>limonpHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\header\limonp\StringUtil.hpp">
+      <Filter>limonpHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\header\limonp\Thread.hpp">
+      <Filter>limonpHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\header\limonp\ThreadPool.hpp">
+      <Filter>limonpHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\header\cppjieba\DictTrie.hpp">
+      <Filter>cppjiebaHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\header\cppjieba\FullSegment.hpp">
+      <Filter>cppjiebaHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\header\cppjieba\HMMModel.hpp">
+      <Filter>cppjiebaHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\header\cppjieba\HMMSegment.hpp">
+      <Filter>cppjiebaHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\header\cppjieba\Jieba.hpp">
+      <Filter>cppjiebaHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\header\cppjieba\KeywordExtractor.hpp">
+      <Filter>cppjiebaHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\header\cppjieba\MixSegment.hpp">
+      <Filter>cppjiebaHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\header\cppjieba\MPSegment.hpp">
+      <Filter>cppjiebaHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\header\cppjieba\PosTagger.hpp">
+      <Filter>cppjiebaHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\header\cppjieba\PreFilter.hpp">
+      <Filter>cppjiebaHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\header\cppjieba\QuerySegment.hpp">
+      <Filter>cppjiebaHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\header\cppjieba\SegmentBase.hpp">
+      <Filter>cppjiebaHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\header\cppjieba\SegmentTagged.hpp">
+      <Filter>cppjiebaHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\header\cppjieba\TextRankExtractor.hpp">
+      <Filter>cppjiebaHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\header\cppjieba\Trie.hpp">
+      <Filter>cppjiebaHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\header\cppjieba\Unicode.hpp">
+      <Filter>cppjiebaHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\cc-visitors.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\error-weight.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\expander-cache.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\impl-to-fst.h">
+      <Filter>fstHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tn\header\fst\power-weight-mappers.h">
+      <Filter>fstHeader</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -36,8 +36,7 @@ void tts_free_data(void * data)
      free(data);
 }
 
-
-void saveToWavFile(const char* path, vector<retStruct>& data, int totalAudioLen) {
+vector<uint8_t> saveToWavBuffer(vector<wavSliceStruct>& data, int totalAudioLen) {
     char header[44];
     int byteRate = 16 * 16000 * 1 / 8;
     int totalDataLen = totalAudioLen + 36;
@@ -89,19 +88,39 @@ void saveToWavFile(const char* path, vector<retStruct>& data, int totalAudioLen)
     header[42] = (char)((totalAudioLen >> 16) & 0xff);
     header[43] = (char)((totalAudioLen >> 24) & 0xff);
 
+    int len = 0;
+    for (const auto& r : data) {
+        if (r.wavData.empty() || r.startIdx == r.wavData.size())
+            continue;
+        len += (r.endIdx - r.startIdx);
+    }
+
+    vector<uint8_t> ret(sizeof(header) + len * 2);
+    memcpy(ret.data(), header, sizeof(header));
+
+    int16_t* ptr = (int16_t*)(ret.data() + sizeof(header));
+
+    int cnt = 0;
+    for (const auto& r : data) {
+        if (r.wavData.empty() || r.startIdx == r.wavData.size())
+            continue;
+        int len = (r.endIdx - r.startIdx);
+        memcpy(ptr + cnt, r.wavData.data() + r.startIdx, len * sizeof(int16_t));
+        cnt += len;
+    }
+    return ret;
+}
+
+void saveToWavFile(const char* path, vector<wavSliceStruct>& data, int totalAudioLen) {
+    auto res = saveToWavBuffer(data, totalAudioLen);
+
     FILE* fpOut = fopen(path, "wb");
     if (!fpOut) {
-        std::cerr << "File [" << path << "] write fail.\n";
+        std::cerr << "\nFile [" << path << "] write fail.\n";
         exit(-1);
     }
 
-    fwrite(header, 1, 44, fpOut);
-    for (const auto& r : data) {
-        if (!r.wavData || r.startIdx == r.len)
-            continue;
-        fwrite(r.wavData + r.startIdx, 1, (r.endIdx - r.startIdx) * sizeof(int16_t), fpOut);
-        free(r.wavData);
-    }
+    fwrite(res.data(), 1, res.size(), fpOut);
     fclose(fpOut);
 }
 
